@@ -1,0 +1,13 @@
+<template>
+    <lightning-card>
+    <lightning-layout>
+        <lightning-layout-item size="6" padding="around-small">
+    <lightning-input label="Name" onchange={nameHandler}></lightning-input>
+    <lightning-input label="Phone" onchange={phoneHandler}></lightning-input>
+    <lightning-input label="Web" onchange={webHandler}></lightning-input>
+
+    <lightning-button label="save" onclick={createAccount}></lightning-button>
+        </lightning-layout-item >
+    </lightning-layout>
+    </lightning-card>
+</template>

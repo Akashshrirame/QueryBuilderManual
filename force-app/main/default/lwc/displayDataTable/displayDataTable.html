@@ -1,0 +1,19 @@
+<template>
+  <div class="go-back" style="width:100%;display:flex;justify-content:space-between;">
+    <div class="back-button" style="padding: 0px 10px 15px 10px;">
+      <lightning-button-icon icon-name="utility:back" alternative-text="Go Back" title="Go Back"
+        onclick={backButtonHandler}><label>refresh</label></lightning-button-icon> 
+    </div>
+    <lightning-button variant="brand" label="Export All" onclick={exportData}></lightning-button>
+    <div class="menu-item" style="padding: 0px 10px 15px 10px;">
+      <lightning-button-menu>
+        <lightning-menu-item label="Send Bulk WhatsApp Message" value="Send Bulk WhatsApp Message" onclick={exportData}>
+        </lightning-menu-item>
+      </lightning-button-menu>
+    </div>
+  </div>
+  <div class="datatable">
+    <lightning-datatable class="slds-max-medium-table_stacked" key-field="data.AccountId" 
+    data={data} columns={columns} onrowselection={getSelectedId} onrowaction={handleRowAction}> </lightning-datatable>
+  </div>
+</template>
